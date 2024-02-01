@@ -1,0 +1,91 @@
+@import "_fonts.sass"
+@import "_styles.sass"
+
+*
+    margin: 0px
+    padding: 0px
+    font-family: PoppinsRegular
+    font-weight: normal
+a
+    text-decoration: none
+    color: $textColor
+ul
+    list-style: none
+img
+    width: 100%
+    height: auto
+.wrapper
+    position: relative
+    display: flex
+    max-width: 1440px
+    margin: 0px auto
+.sidebar
+    width: 306px
+    padding: 0px 28px
+    background: rgb(255, 255, 255)
+    &__title
+        margin-top: 39px
+    &__list
+        margin-top: 42px
+
+.logo
+    @include alignCenter()
+    &__thumb
+        @include alignCenter()
+        width: 37px
+    &__title
+        margin-left: 8px
+        font-family: PoppinsSemiBold
+        font-size: 26px
+        letter-spacing: 0.01em
+    &__version
+        font-family: PoppinsMedium
+        font-size: 10px
+        letter-spacing: -0.01em
+        color: rgba(131, 131, 131, 1)
+.menu
+    &__btn
+        position: relative
+        @include alignCenter()
+        justify-content: start
+        padding: 11px
+        margin: 20px 0px
+        &_thumb
+            @include alignCenter()
+            width: 24px
+        &_title
+            margin-left: 14px
+            font-family: PoppinsMedium
+            font-size: 14px
+            letter-spacing: -0.01em
+            color: rgba(145, 151, 179, 1)
+        &_chevron
+            position: absolute
+            right: 11px
+.menu-active
+    border-radius: 8px
+    background: rgba(89, 50, 234, 1)
+    .menu__btn_title
+        color: rgb(255, 255, 255)
+    .menu__btn_thumb,
+    .menu__btn_chevron img
+        filter: brightness(0) invert(1)
+.user
+    @include alignCenter()
+    justify-content: start
+    &__foto
+        @include alignCenter()
+        width: 42px
+        margin: 8px
+    &__item
+        &_name
+            font-family: PoppinsMedium
+            font-size: 14px
+            letter-spacing: 0.01em
+        &_possition
+            font-family: PoppinsRegular
+            font-size: 12px
+            letter-spacing: 0.01em
+            color: rgba(117, 117, 117, 1)
+.page
+    background: rgba(250, 251, 255, 1)
