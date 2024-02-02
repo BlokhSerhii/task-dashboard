@@ -19,15 +19,20 @@ img
     display: flex
     max-width: 1440px
     margin: 0px auto
+    background: #000
 .sidebar
+    position: relative
     width: 306px
+    height: 100vh
     padding: 0px 28px
     background: rgb(255, 255, 255)
     &__title
         margin-top: 39px
     &__list
         margin-top: 42px
-
+    &__user
+        position: absolute
+        bottom: 68px
 .logo
     @include alignCenter()
     &__thumb
@@ -88,4 +93,112 @@ img
             letter-spacing: 0.01em
             color: rgba(117, 117, 117, 1)
 .page
+    width: 100%
+    height: 100vh
     background: rgba(250, 251, 255, 1)
+    &__title
+        margin-top: 39px
+        margin-left: 70px
+        margin-right: 95px
+        font-family: PoppinsMedium
+        font-size: 24px
+    &__content
+        margin-top: 51px
+        margin-left: 70px
+        margin-right: 95px
+        border-radius: 30px
+        background: rgb(255, 255, 255)
+.content
+    &__header
+        @include alignCenter()
+        justify-content: space-between
+        padding: 33px 38px
+    &__table
+        width: 100%
+        margin-top: 26px
+        padding: 33px 38px
+.content-caption
+    &__title
+        font-family: PoppinsSemiBold
+        font-size: 22px
+        letter-spacing: -0.01em
+        text-transform: capitalize
+    &__subtitle
+        font-family: PoppinsRegular
+        font-size: 14px
+        letter-spacing: -0.01em
+        color: rgba(22, 192, 152, 1)
+        text-transform: capitalize
+.search-form
+    @include alignCenter()
+    height: 38px
+    border-radius: 10px
+    background: rgba(249, 251, 255, 1)
+    &__btn
+        @include alignCenter()
+        height: 38px
+        padding: 7px
+        border-right: 10px
+        background: none
+        border: none
+    &__input
+        width: 178px
+        background: none
+        border: none
+        outline: rgb(255, 255, 255, 0)
+    &__input::placeholder
+        font-family: PoppinsRegular
+        font-size: 12px
+        letter-spacing: -0.01em
+        color: rgba(181, 183, 192, 1)
+
+thead
+    position: relative
+thead::after
+    content: ''
+    position: absolute
+    margin-left: -38px
+    width: calc(100% + 76px)
+    height: 1px
+    background: rgba(238, 238, 238, 1)
+th
+    text-align: left
+    padding: 14px 0px
+    font-family: PoppinsMedium
+    font-size: 14px
+    letter-spacing: -0.01em
+    color: rgba(181, 183, 192, 1)
+td
+    border-bottom: 1px solid rgba(238, 238, 238, 1)
+td,
+td pre
+    text-align: left
+    padding: 20px 0px
+    font-family: PoppinsMedium
+    font-size: 14px
+    letter-spacing: -0.01em
+    color: rgba(41, 45, 50, 1)
+.content
+    &__table
+        &_status
+            text-align: center
+        &_btn
+            @include alignCenter()
+            font-family: PoppinsMedium
+            font-size: 14px
+            letter-spacing: -0.01em
+            padding: 4px 12px
+            border-radius: 4px
+            color: rgba(0, 135, 103, 1)
+            border: 1px solid rgba(0, 176, 135, 1)
+            background: rgba(22, 192, 152, 0.38)
+.inactive
+    @include alignCenter()
+    font-family: PoppinsMedium
+    font-size: 14px
+    letter-spacing: -0.01em
+    padding: 4px 12px
+    border-radius: 4px
+    color: rgba(223, 4, 4, 1)
+    border: 1px solid rgba(223, 4, 4, 1)
+    background: rgba(255, 197, 197, 1)

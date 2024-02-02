@@ -42,7 +42,7 @@
                             <img src="./img/btn-thumbs/chevron-right.svg" alt="Chevron">
                         </div>
                     </li>
-                    <li class="menu__btn">
+                    <li id="income" class="menu__btn">
                         <div class="menu__btn_thumb">
                             <img src="./img/btn-thumbs/wallet-money.svg" alt="Thumb">
                         </div> 
@@ -70,7 +70,7 @@
                         </div>
                     </li>
                 </ul>
-                <div class="siderbar__user user">
+                <div class="sidebar__user user">
                     <div class="user__foto">
                         <img src="./img/users/evano.svg" alt="User">
                     </div>
@@ -80,62 +80,72 @@
                     </div>
                 </div>
         </div>
-        <main>
-            <div class="page">
-                <h2 class="page__title"> Hello Evano &#128075;&#127995;,</h2>
-                <div class="page__content content">
-                    <div class="content__header">
-                        <div class="content__header_caption content-caption">
-                            <h3 class="content-caption__title"> All Customers</h3>
-                            <p class="content-caption__subtitle">Active Members</p>
-                        </div>
-                        <form class="content__header_form search-form" action="#">
-                            <button type="button" class="search-form__btn">
-                                <img src="" alt="">
-                            </button>
-                            <input id="search" class="search-form__input" type="text">
-                        </form>
+        <div class="page">
+            <h2 class="page__title"> Hello Evano &#128075;&#127995;,</h2>
+            <div class="page__content content">
+                <div class="content__header">
+                    <div class="content__header_caption content-caption">
+                        <h3 class="content-caption__title"> All customers</h3>
+                        <p class="content-caption__subtitle">Active members</p>
                     </div>
-                    <table id="custumers" class="content__table">
-                        <thead>
-                            <tr>
-                                <th>Customer name</th>
-                                <th>Company</th>
-                                <th>Phone number</th>
-                                <th>Email</th>
-                                <th>Country</th>
-                                <th>Status</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Jane Cooper</td>
-                                <td>Microsoft</td>
-                                <td>
-                                    <pre>(225) 555-0118</pre>
-                                </td>
-                                <td>jane@microsoft.com</td>
-                                <td>United States</td>
-                                <td>
-                                    <div class="status">Active</div>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <div class="content__footer content-footer">
-                        <p class="content-footer__info">Showing data 1 to 8 of  256K entries</p>
-                        <div class="content-footer__controls content-controls">
-                            <button type="button" class="content-controls__btn">&lt;</button>
-                            <ul class="content-controls__list">
-                                <li class="content-controls__item">1</li>
-                                <li class="content-controls__item controls-space">...</li>
-                            </ul>
-                            <button type="button" class="content-controls__btn">&gt;</button>
-                        </div>
+                    <form class="content__header_form search-form" action="#">
+                        <button type="button" class="search-form__btn">
+                            <img src="./img/search.svg" alt="Loop">
+                        </button>
+                        <input id="search" class="search-form__input" type="text" placeholder="Search">
+                    </form>
+                </div>
+                <table id="custumers" class="content__table">
+                    <thead>
+                        <tr>
+                            <th>Customer name</th>
+                            <th>Company</th>
+                            <th>Phone number</th>
+                            <th>Email</th>
+                            <th>Country</th>
+                            <th class="content__table_status">Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Jane Cooper</td>
+                            <td>Microsoft</td>
+                            <td>
+                                <pre>(225) 555-0118</pre>
+                            </td>
+                            <td>jane@microsoft.com</td>
+                            <td>United States</td>
+                            <td class="content__table_status">
+                                <div class="content__table_btn">Active</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Jane Cooper</td>
+                            <td>Microsoft</td>
+                            <td>
+                                <pre>(225) 555-0118</pre>
+                            </td>
+                            <td>jane@microsoft.com</td>
+                            <td>United States</td>
+                            <td class="content__table_status">
+                                <div class="content__table_btn inactive">Inactive</div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="content__footer content-footer">
+                    <p class="content-footer__info">Showing data 1 to 8 of  256K entries</p>
+                    <div class="content-footer__controls content-controls">
+                        <button type="button" class="content-controls__btn">&lt;</button>
+                        <ul class="content-controls__list">
+                            <li class="content-controls__item">1</li>
+                            <li class="content-controls__item controls-space">...</li>
+                        </ul>
+                        <button type="button" class="content-controls__btn">&gt;</button>
                     </div>
                 </div>
             </div>
-        </main>
+        </div>
     </div>
 </body>
 </html>
