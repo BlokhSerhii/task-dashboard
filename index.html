@@ -9,20 +9,21 @@
 <body>
     <div class="wrapper">
         <div class="sidebar">
-            <div class="sidebar__title">
-                <div class="logo">
-                    <div class="logo__thumb">
-                        <img src="./img/setting.svg" alt="Logo">
+            <div class="sidebar__content">
+                <div class="sidebar__title">
+                    <div class="logo">
+                        <div class="logo__thumb">
+                            <img src="./img/setting.svg" alt="Logo">
+                        </div>
+                        <h2 class="logo__title">Dashboard<span class="logo__version">v.01</span></h2>
                     </div>
-                    <h2 class="logo__title">Dashboard<span class="logo__version">v.01</span></h2>
                 </div>
-            </div>
                 <ul class="sidebar__list menu">
                     <li class="menu__btn">
-                       <div class="menu__btn_thumb">
+                        <div class="menu__btn_thumb">
                             <img src="./img/btn-thumbs/key-square.svg" alt="Thumb">
-                       </div> 
-                       <p class="menu__btn_title">Dashboard</p>
+                        </div> 
+                        <p class="menu__btn_title">Dashboard</p>
                     </li>
                     <li class="menu__btn">
                         <div class="menu__btn_thumb">
@@ -70,18 +71,22 @@
                         </div>
                     </li>
                 </ul>
-                <div class="sidebar__user user">
-                    <div class="user__foto">
-                        <img src="./img/users/evano.svg" alt="User">
-                    </div>
-                    <div class="user__item">
-                        <p class="user__item_name">Evano</p>
-                        <p class="user__item_possition">Project Manager</p>
-                    </div>
+            </div>
+            <div class="sidebar__user user">
+                <div class="user__foto">
+                    <img src="./img/users/evano.svg" alt="User">
                 </div>
+                <div class="user__item">
+                    <p class="user__item_name">Evano</p>
+                    <p class="user__item_possition">Project Manager</p>
+                </div>
+            </div>
         </div>
         <div class="page">
-            <h2 class="page__title"> Hello Evano &#128075;&#127995;,</h2>
+            <div class="page__caption">
+                <h2 class="page__title"> Hello Evano &#128075;&#127995;,</h2>
+                <div class="page__title menu-btn">Menu</div>
+            </div>
             <div class="page__content content">
                 <div class="content__header">
                     <div class="content__header_caption content-caption">
@@ -89,10 +94,10 @@
                         <p class="content-caption__subtitle">Active members</p>
                     </div>
                     <form class="content__header_form search-form" action="#">
-                        <button type="button" class="search-form__btn">
+                        <button type="button" class="search-form__btn" onclick="searchByName()">
                             <img src="./img/search.svg" alt="Loop">
                         </button>
-                        <input id="search" class="search-form__input" type="text" placeholder="Search">
+                        <input id="search" class="search-form__input" type="text" placeholder="Search" onkeydown="handleKeyPress(event)">
                     </form>
                 </div>
                 <table id="custumers" class="content__table">
@@ -107,28 +112,100 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>Jane Cooper</td>
-                            <td>Microsoft</td>
+                        <tr class="custumer">
+                            <td class="custumer__name">Jane Cooper</td>
+                            <td class="custumer_company">Microsoft</td>
                             <td>
-                                <pre>(225) 555-0118</pre>
+                                <pre class="custumer__phone">(225) 555-0118</pre>
                             </td>
-                            <td>jane@microsoft.com</td>
-                            <td>United States</td>
-                            <td class="content__table_status">
-                                <div class="content__table_btn">Active</div>
+                            <td class="custumer__email">jane@microsoft.com</td>
+                            <td class="custumer__country">United States</td>
+                            <td class="custumer__status">
+                                <div class="custumer__status_btn active">Active</div>
                             </td>
                         </tr>
-                        <tr>
-                            <td>Jane Cooper</td>
-                            <td>Microsoft</td>
+                        <tr class="custumer">
+                            <td class="custumer__name">Floyd Miles</td>
+                            <td class="custumer_company">Yahoo</td>
                             <td>
-                                <pre>(225) 555-0118</pre>
+                                <pre class="custumer__phone">(205) 555-0100</pre>
                             </td>
-                            <td>jane@microsoft.com</td>
-                            <td>United States</td>
-                            <td class="content__table_status">
-                                <div class="content__table_btn inactive">Inactive</div>
+                            <td class="custumer__email">floyd@yahoo.com</td>
+                            <td class="custumer__country">Kiribati</td>
+                            <td class="custumer__status">
+                                <div class="custumer__status_btn inactive">Inactive</div>
+                            </td>
+                        </tr>
+                        <tr class="custumer">
+                            <td class="custumer__name">Ronald Richards</td>
+                            <td class="custumer_company">Adobe</td>
+                            <td>
+                                <pre class="custumer__phone">(302) 555-0107</pre>
+                            </td>
+                            <td class="custumer__email">ronald@adobe.com</td>
+                            <td class="custumer__country">Israel</td>
+                            <td class="custumer__status">
+                                <div class="custumer__status_btn inactive">Inactive</div>
+                            </td>
+                        </tr>
+                        <tr class="custumer">
+                            <td class="custumer__name">Marvin McKinney</td>
+                            <td class="custumer_company">Tesla</td>
+                            <td>
+                                <pre class="custumer__phone">(252) 555-0126</pre>
+                            </td>
+                            <td class="custumer__email">marvin@tesla.com</td>
+                            <td class="custumer__country">Iran</td>
+                            <td class="custumer__status">
+                                <div class="custumer__status_btn active">Active</div>
+                            </td>
+                        </tr>
+                        <tr class="custumer">
+                            <td class="custumer__name">Jerome Bell</td>
+                            <td class="custumer_company">Google</td>
+                            <td>
+                                <pre class="custumer__phone">(629) 555-0129</pre>
+                            </td>
+                            <td class="custumer__email">jerome@google.com</td>
+                            <td class="custumer__country">Réunion</td>
+                            <td class="custumer__status">
+                                <div class="custumer__status_btn active">Active</div>
+                            </td>
+                        </tr>
+                        <tr class="custumer">
+                            <td class="custumer__name">Kathryn Murphy</td>
+                            <td class="custumer_company">Microsoft</td>
+                            <td>
+                                <pre class="custumer__phone">(406) 555-0120</pre>
+                            </td>
+                            <td class="custumer__email">kathryn@microsoft.com</td>
+                            <td class="custumer__country">Curaçao</td>
+                            <td class="custumer__status">
+                                <div class="custumer__status_btn active">Active</div>
+                            </td>
+                        </tr>
+                        <tr class="custumer">
+                            <td class="custumer__name">Jacob Jones</td>
+                            <td class="custumer_company">Yahoo</td>
+                            <td>
+                                <pre class="custumer__phone">(208) 555-0112</pre>
+                            </td>
+                            <td class="custumer__email">jacob@yahoo.com</td>
+                            <td class="custumer__country">Brazil</td>
+                            <td class="custumer__status">
+                                <div class="custumer__status_btn active">Active</div>
+                            </td>
+                        </tr>
+                        <tr class="custumer">
+                            <td class="custumer__name">Kristin Watson</td>
+                            <td class="custumer_company">Facebook</td>
+                            <td>
+                                <pre class="custumer__phone">(704) 555-0127</pre>
+                            </td>
+                            <td class="custumer__email">kristin@facebook.com</td>
+                            <td class="custumer__country">Åland Islands</td>
+                            <td class="custumer__status">
+                                <div class="custumer__status_btn inactive">Inactive</div>
                             </td>
                         </tr>
                     </tbody>
@@ -138,8 +215,12 @@
                     <div class="content-footer__controls content-controls">
                         <button type="button" class="content-controls__btn">&lt;</button>
                         <ul class="content-controls__list">
-                            <li class="content-controls__item">1</li>
+                            <li class="content-controls__item controls-active">1</li>
+                            <li class="content-controls__item">2</li>
+                            <li class="content-controls__item">3</li>
+                            <li class="content-controls__item">4</li>
                             <li class="content-controls__item controls-space">...</li>
+                            <li class="content-controls__item">40</li>
                         </ul>
                         <button type="button" class="content-controls__btn">&gt;</button>
                     </div>
@@ -147,5 +228,6 @@
             </div>
         </div>
     </div>
+    <script src="js/main.js"></script>
 </body>
 </html>
